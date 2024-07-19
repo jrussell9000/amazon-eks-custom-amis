@@ -3,19 +3,19 @@
 set -x
 
 # https://docs.nvidia.com/datacenter/tesla/index.html
-NVIDIA_DRIVER_VERSION=${NVIDIA_DRIVER_VERSION:-"535.86.10"}
+NVIDIA_DRIVER_VERSION=${NVIDIA_DRIVER_VERSION:-"535.183.06"}
 
 # CUDA toolkit https://docs.nvidia.com/datacenter/tesla/drivers/index.html#cuda-drivers
 CUDA_TOOLKIT_PACKAGE=${CUDA_TOOLKIT_PACKAGE:-cuda-toolkit-12-2}
 
 # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa-verify.html
-EFA_INSTALLER_VERSION=${EFA_INSTALLER_VERSION:-"1.25.0"}
+EFA_INSTALLER_VERSION=${EFA_INSTALLER_VERSION:-"1.33.0"}
 
 # https://www.open-mpi.org/software/hwloc/v2.9/
-MPI_HWLOC_VERSION=${MPI_HWLOC_VERSION:-"2.9.2"}
+MPI_HWLOC_VERSION=${MPI_HWLOC_VERSION:-"2.9.3"}
 
 # https://github.com/aws/aws-ofi-nccl/releases
-AWS_OFI_NCCL_VERSION=${AWS_OFI_NCCL_VERSION:-"1.7.1"}
+AWS_OFI_NCCL_VERSION=${AWS_OFI_NCCL_VERSION:-"1.9.2"}
 
 # Remove existing NVIDIA driver if present
 if yum list installed 2>/dev/null | grep -q "^nvidia-driver"; then
